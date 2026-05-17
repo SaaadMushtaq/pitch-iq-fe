@@ -1,4 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "./App";
+import DashboardPage from "./pages/DashboardPage";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
+import ProtectedRoute from "./components/ProtectedRoute";
 
-export const router = createBrowserRouter([{ path: "/", Component: App }]);
+export const router = createBrowserRouter([
+  {
+    Component: ProtectedRoute,
+    children: [{ path: "/", Component: DashboardPage }],
+  },
+  { path: "/login", Component: LoginPage },
+  { path: "/signup", Component: SignupPage },
+]);

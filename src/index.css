@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+@theme {
+  --color-pitch: #0a1a0f;
+  --color-surface: #0d2818;
+  --color-brand: #166534;
+  --color-gold: #facc15;
+}
+
+body {
+  background-color: #0a1a0f;
+  background-image:
+    repeating-linear-gradient(
+      transparent 0px,
+      transparent 79px,
+      rgba(255, 255, 255, 0.02) 79px,
+      rgba(255, 255, 255, 0.02) 80px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 79px,
+      rgba(255, 255, 255, 0.02) 79px,
+      rgba(255, 255, 255, 0.02) 80px
+    );
+  color: white;
+  min-height: 100vh;
+}
